@@ -1650,6 +1650,7 @@ function animateCard(correct) {
 
 function showFeedback(prefix, correct, q) {
   const fb = document.getElementById(prefix + '-feedback');
+  fb.style.display = ''; 
   fb.className = 'feedback-toast ' + (correct ? 'correct' : 'wrong');
   const msg = correct
     ? '✓ Correct!'
