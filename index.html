@@ -1576,7 +1576,6 @@ function renderFlashcard() {
   // Clear feedback — FIX: reset feedback before rendering new question
   const feedback = document.getElementById('fc-feedback');
   feedback.className = 'feedback-toast';
-  feedback.style.display = 'none';
 
   const card = document.getElementById('fc-card');
   card.classList.remove('wobble', 'spring-up');
@@ -1733,7 +1732,6 @@ function renderTestQuestion() {
   // FIX: Reset feedback
   const feedback = document.getElementById('t-feedback');
   feedback.className = 'feedback-toast';
-  feedback.style.display = 'none';
   state.test.answered = false;
 
   const card = document.getElementById('t-card');
