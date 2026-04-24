@@ -1548,6 +1548,10 @@ function startFlashcards(mode) {
   } else {
     deck = [...QUESTIONS];
   }
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
   state.flashcards.deck  = deck;
   state.flashcards.index = 0;
   showScreen('flashcards');
